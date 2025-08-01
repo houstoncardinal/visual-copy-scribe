@@ -81,7 +81,7 @@ const Services = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Security Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -105,7 +105,7 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-105 bg-gradient-card border-border/20 h-full">
+              <Card key={index} className="group bg-white border-2 border-accent rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-4 bg-gradient-accent rounded-full w-16 h-16 flex items-center justify-center group-hover:animate-security-pulse">
                     <service.icon className="w-8 h-8 text-primary-foreground" />

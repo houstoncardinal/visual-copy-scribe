@@ -33,9 +33,7 @@ const ContactForm = () => {
   ];
 
   const licenseTypes = [
-    "Unarmed",
-    "Armed", 
-    "Both Unarmed & Armed"
+    "Armed"
   ];
 
   const progress = (step / 3) * 100;

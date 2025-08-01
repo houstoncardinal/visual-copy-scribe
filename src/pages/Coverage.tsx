@@ -65,7 +65,7 @@ const Coverage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             COVERAGE AREAS
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -76,10 +76,10 @@ const Coverage = () => {
       </section>
 
       {/* Coverage Overview */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               WHERE WE OPERATE
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -90,7 +90,7 @@ const Coverage = () => {
           {/* States Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {states.map((state, index) => (
-              <Card key={index} className="bg-gradient-card border-border/20 hover:shadow-[var(--shadow-card)] transition-all duration-300">
+              <Card key={index} className="bg-white border-2 border-accent rounded-xl p-6 shadow-lg flex flex-col items-center">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-gradient-accent p-3 rounded-lg">
@@ -149,7 +149,7 @@ const Coverage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-card">
+      <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">

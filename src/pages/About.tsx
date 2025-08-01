@@ -50,7 +50,7 @@ const About = () => {
     "Rigorous background checks and screening process",
     "Comprehensive training programs and certifications",
     "Multi-state operations and licensing",
-    "Armed and unarmed security options",
+    "Armed security options",
     "24/7/365 availability and response",
     "Customized security protocols for each client",
     "Government and commercial contract experience"
@@ -63,7 +63,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About K&S Security
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -74,24 +74,19 @@ const About = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
                 Providing You Protection Is Our Only Business
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  K&S Staffing & Consulting delivers elite security solutions through a team of highly trained 
-                  armed and unarmed personnel. We proudly serve a wide range of clients—including commercial 
-                  properties, private estates, and government contracts—with a steadfast commitment to safety, 
-                  professionalism, and discretion.
+                  K&S Staffing & Consulting delivers elite security solutions through a team of highly trained armed personnel. We proudly serve a wide range of clients—including commercial properties, private estates, and government contracts—with a steadfast commitment to safety, professionalism, and discretion.
                 </p>
                 <p>
-                  All of our security officers are fully licensed, insured, and rigorously trained to operate 
-                  in both standard and high-risk environments. Whether providing visible deterrence or armed 
-                  protection, our personnel are prepared to meet the unique demands of each assignment.
+                  All of our security officers are fully licensed, insured, and rigorously trained to operate in both standard and high-risk environments. Whether providing visible deterrence or armed protection, our personnel are prepared to meet the unique demands of each assignment.
                 </p>
                 <p>
                   At K&S S&C, we don't just offer protection—we provide peace of mind through excellence, 
@@ -136,15 +131,17 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-card">
+      <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <Card className="p-8 bg-background/50 border-border/20">
+            <Card className="text-center p-8 bg-primary/80 border-2 border-accent rounded-xl shadow-lg group text-white">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-accent rounded-full">
                   <Target className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">
+                  Our Mission
+                </h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 To provide unparalleled security services that protect our clients' most valuable assets—their 
@@ -153,12 +150,14 @@ const About = () => {
               </p>
             </Card>
 
-            <Card className="p-8 bg-background/50 border-border/20">
+            <Card className="text-center p-8 bg-white border-2 border-accent rounded-xl shadow-lg group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-accent rounded-full">
                   <Eye className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
+                <h3 className="text-xl font-bold mb-2 text-primary group-hover:text-primary transition-colors">
+                  Our Vision
+                </h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 To be the most trusted and respected security services provider nationwide, recognized for our 
@@ -171,10 +170,10 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Core Values
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -222,7 +221,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">

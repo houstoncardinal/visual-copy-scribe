@@ -12,28 +12,25 @@ const WhereWeOperate = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-card">
+    <section className="py-20 bg-neutral-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            WHERE WE OPERATE
+          <h2 className="main-title text-4xl md:text-5xl font-extrabold text-white uppercase mb-8 tracking-tight drop-shadow-lg">
+            Where We Operate
           </h2>
         </div>
 
         {/* States Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           {states.map((state, index) => (
-            <Button
+            <div
               key={index}
-              variant="security"
-              size="lg"
-              className="h-16 text-lg font-bold bg-primary hover:bg-primary-light transition-all duration-300 transform hover:scale-105"
-              asChild
+              className="group flex flex-col items-center justify-center border-2 border-accent bg-white text-accent rounded-xl px-8 py-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
-              <Link to={`/coverage/${state.code.toLowerCase()}`}>
-                {state.name}
-              </Link>
-            </Button>
+              <span className="text-5xl font-extrabold main-title mb-2 tracking-tight">{state.code}</span>
+              <span className="text-xl font-semibold tracking-wide uppercase text-neutral-800 mb-1">{state.name}</span>
+              <Link to={`/coverage/${state.code.toLowerCase()}`} className="mt-2 text-sm font-bold text-primary underline underline-offset-4 hover:text-accent transition-colors">View Coverage</Link>
+            </div>
           ))}
         </div>
 

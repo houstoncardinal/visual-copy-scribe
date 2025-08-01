@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import VipProtection from "./pages/VipProtection";
 import About from "./pages/About";
 import Coverage from "./pages/Coverage";
 import Contact from "./pages/Contact";
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/vip-protection" element={<VipProtection />} />
           <Route path="/company" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="/coverage" element={<Coverage />} />

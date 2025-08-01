@@ -94,7 +94,7 @@ const ServicesOverview = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-105 bg-gradient-card border-border/20">
+            <Card key={index} className="group hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-105 bg-gradient-card border-border/20 hover:shadow-2xl hover:shadow-[var(--shadow-security)] hover:border-accent/80 hover:ring-2 hover:ring-accent/40 hover:scale-105 hover:bg-card/95 hover:z-10">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-4 bg-gradient-accent rounded-full w-16 h-16 flex items-center justify-center group-hover:animate-security-pulse">
                   <service.icon className="w-8 h-8 text-primary-foreground" />

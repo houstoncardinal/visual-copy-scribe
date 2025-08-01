@@ -51,7 +51,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             CONTACT US
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -62,13 +62,13 @@ const Contact = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Get Started Today</h2>
+                <h2 className="text-3xl font-bold text-black mb-4">Get Started Today</h2>
                 <p className="text-lg text-muted-foreground">
                   Fill out our secure form and we'll contact you within 24 hours to discuss 
                   your security needs and provide a customized solution.
@@ -95,34 +95,30 @@ const Contact = () => {
               {/* Contact Methods */}
               <div className="space-y-6 mb-12">
                 {contactMethods.map((method, index) => (
-                  <Card key={index} className="bg-gradient-card border-border/20 hover:shadow-[var(--shadow-card)] transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-gradient-accent rounded-lg flex-shrink-0">
-                          <method.icon className="w-6 h-6 text-primary-foreground" />
-                        </div>
-                        <div className="flex-grow">
-                          <h3 className="font-bold text-foreground mb-1">{method.title}</h3>
-                          <p className="text-sm text-muted-foreground mb-2">{method.description}</p>
-                          {method.action ? (
-                            method.action.startsWith('tel:') || method.action.startsWith('mailto:') ? (
-                              <a 
-                                href={method.action}
-                                className="font-semibold text-primary hover:text-primary-light transition-colors"
-                              >
-                                {method.info}
-                              </a>
-                            ) : (
-                              <Button variant="link" className="p-0 h-auto font-semibold" asChild>
-                                <a href={method.action}>{method.info}</a>
-                              </Button>
-                            )
-                          ) : (
-                            <span className="font-semibold text-primary">{method.info}</span>
-                          )}
-                        </div>
-                      </div>
-                    </CardContent>
+                  <Card key={index} className="bg-white border-2 border-accent rounded-xl p-6 shadow-lg flex items-center gap-4">
+                    <div className="p-3 bg-gradient-accent rounded-lg flex-shrink-0">
+                      <method.icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-grow">
+                      <h3 className="font-bold text-foreground mb-1">{method.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-2">{method.description}</p>
+                      {method.action ? (
+                        method.action.startsWith('tel:') || method.action.startsWith('mailto:') ? (
+                          <a 
+                            href={method.action}
+                            className="font-semibold text-primary hover:text-primary-light transition-colors"
+                          >
+                            {method.info}
+                          </a>
+                        ) : (
+                          <Button variant="link" className="p-0 h-auto font-semibold" asChild>
+                            <a href={method.action}>{method.info}</a>
+                          </Button>
+                        )
+                      ) : (
+                        <span className="font-semibold text-primary">{method.info}</span>
+                      )}
+                    </div>
                   </Card>
                 ))}
               </div>

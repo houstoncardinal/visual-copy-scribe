@@ -6,19 +6,21 @@
 All colors MUST be HSL.
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;900&display=swap');
+
 @layer base {
   :root {
     /* Security & Professional Theme */
     --background: 220 13% 9%;
     --foreground: 0 0% 98%;
 
-    --card: 220 13% 12%;
+    --card: 356 63% 13%; /* darkened #811e1d for card backgrounds */
     --card-foreground: 0 0% 95%;
 
     --popover: 220 13% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 84% 40%;
+    --primary: 356 63% 31%; /* #811e1d */
     --primary-foreground: 0 0% 98%;
 
     --secondary: 220 13% 15%;
@@ -27,31 +29,31 @@ All colors MUST be HSL.
     --muted: 220 13% 15%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 0 84% 50%;
+    --accent: 356 63% 31%; /* #811e1d */
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 356 63% 41%; /* lighter #811e1d */
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 13% 20%;
     --input: 220 13% 15%;
-    --ring: 0 84% 40%;
+    --ring: 356 63% 31%;
 
     /* Custom Security Theme Colors */
-    --security-primary: 0 84% 40%;
-    --security-primary-light: 0 84% 50%;
-    --security-dark: 220 13% 9%;
-    --security-darker: 220 15% 6%;
-    --security-accent: 0 84% 35%;
+    --security-primary: 356 63% 31%;
+    --security-primary-light: 356 63% 41%;
+    --security-dark: 356 63% 13%;
+    --security-darker: 356 63% 9%;
+    --security-accent: 356 63% 25%;
     
     /* Professional Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 13% 9% / 0.95), hsl(220 15% 6% / 0.98));
-    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 8%));
-    --gradient-accent: linear-gradient(135deg, hsl(0 84% 40%), hsl(0 84% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(356 63% 13% / 0.95), hsl(356 63% 9% / 0.98));
+    --gradient-card: linear-gradient(145deg, hsl(356 63% 13%), hsl(356 63% 9%));
+    --gradient-accent: linear-gradient(135deg, hsl(356 63% 31%), hsl(356 63% 41%));
     
     /* Shadows */
-    --shadow-security: 0 10px 30px -5px hsl(0 84% 40% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(220 13% 6% / 0.5);
+    --shadow-security: 0 10px 30px -5px hsl(356 63% 31% / 0.4);
+    --shadow-card: 0 4px 20px -2px hsl(356 63% 9% / 0.6);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,5 +124,23 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   }
+
+  h1, h2, h3, h4, .section-title, .card-title, .main-title {
+    font-family: 'Roboto Slab', Arial, serif;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    color: #111;
+  }
+}
+
+@keyframes footer-bg {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+.animate-footer-bg {
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 20px);
+  animation: footer-bg 8s linear infinite;
+  z-index: 0;
 }

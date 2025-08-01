@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield, Phone, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, Shield, Phone, Mail, ChevronDown, Building, Landmark, Hotel, Music, Shield as ShieldIcon, AlertTriangle, User, GraduationCap, Heart, Users } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesMenuTimeout = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   const navigation = [
@@ -16,12 +17,16 @@ const Header = () => {
   ];
 
   const services = [
-    { name: "Celebrity/VIP Protection", href: "/services/vip-protection" },
-    { name: "Executive Protection", href: "/services/executive-protection" },
-    { name: "International Operations", href: "/services/international-operations" },
-    { name: "Events/Tours", href: "/services/events-tours" },
-    { name: "Domestic Protection/Security", href: "/services/domestic-security" },
-    { name: "Residential & Commercial", href: "/services/residential-commercial" },
+    { name: "APARTMENT COMPLEXES", href: "/services/vip-protection", icon: Building, description: "24/7 residential security monitoring" },
+    { name: "BANKS", href: "/services/executive-protection", icon: Landmark, description: "Financial institution protection services" },
+    { name: "HOTELS", href: "/services/international-operations", icon: Hotel, description: "Hospitality security and guest protection" },
+    { name: "BARS & ENTERTAINMENT", href: "/services/events-tours", icon: Music, description: "Crowd control and venue security" },
+    { name: "ASSET PROTECTION", href: "/services/domestic-security", icon: ShieldIcon, description: "High-value asset and property security" },
+    { name: "WORKPLACE VIOLENCE PREVENTION", href: "/services/residential-commercial", icon: AlertTriangle, description: "Threat assessment and mitigation" },
+    { name: "VIP ESCORT / CONCIERGE", href: "/services/vip-escort", icon: User, description: "Executive protection services" },
+    { name: "PRIVATE SCHOOL ESCORTS", href: "/services/private-school-escorts", icon: GraduationCap, description: "Safe transport for students" },
+    { name: "WEDDINGS", href: "/services/weddings", icon: Heart, description: "Special event security coordination" },
+    { name: "PRIVATE PARTIES", href: "/services/private-parties", icon: Users, description: "Event security and access control" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -45,7 +50,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-security-darker text-foreground border-b border-border/20 sticky top-0 z-50">
+      <header className="bg-black text-foreground border-b border-border/20 sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -66,8 +71,13 @@ const Header = () => {
                   {item.hasDropdown ? (
                     <div
                       className="relative"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
+                      onMouseEnter={() => {
+                        if (servicesMenuTimeout.current) clearTimeout(servicesMenuTimeout.current);
+                        setIsServicesOpen(true);
+                      }}
+                      onMouseLeave={() => {
+                        servicesMenuTimeout.current = setTimeout(() => setIsServicesOpen(false), 200);
+                      }}
                     >
                       <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary text-foreground">
                         {item.name}
@@ -76,22 +86,37 @@ const Header = () => {
                       
                       {/* Mega Menu Dropdown */}
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border/20 rounded-lg shadow-2xl z-50 p-6">
-                          <h3 className="text-lg font-semibold text-foreground mb-4">Our Services</h3>
-                          <div className="grid grid-cols-1 gap-3">
+                        <div
+                          className="absolute top-full left-0 mt-2 w-[700px] bg-black/90 border border-white/10 rounded-2xl shadow-2xl z-50 p-4 backdrop-blur-xl transition-all duration-300 animate-fade-in"
+                          onMouseEnter={() => {
+                            if (servicesMenuTimeout.current) clearTimeout(servicesMenuTimeout.current);
+                            setIsServicesOpen(true);
+                          }}
+                          onMouseLeave={() => {
+                            servicesMenuTimeout.current = setTimeout(() => setIsServicesOpen(false), 200);
+                          }}
+                        >
+                          <h3 className="text-lg font-semibold text-white mb-2 tracking-wide">Our Services</h3>
+                          <div className="grid grid-cols-2 gap-3">
                             {services.map((service) => (
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block p-3 rounded-lg hover:bg-primary/10 transition-colors group"
+                                className="flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all group border border-white/10 hover:border-white/30 shadow-sm hover:shadow-lg backdrop-blur-md"
                               >
-                                <div className="text-sm font-medium text-foreground group-hover:text-primary">
-                                  {service.name}
+                                <service.icon className="w-7 h-7 text-white group-hover:text-primary flex-shrink-0 drop-shadow" />
+                                <div className="flex-1">
+                                  <div className="text-base font-bold text-white group-hover:text-primary mb-1 tracking-wide">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-xs text-white/80 group-hover:text-primary/80 leading-tight">
+                                    {service.description}
+                                  </div>
                                 </div>
                               </Link>
                             ))}
                           </div>
-                          <div className="mt-4 pt-4 border-t border-border/20">
+                          <div className="mt-4 pt-3 border-t border-white/10">
                             <Button variant="security" size="sm" asChild className="w-full">
                               <Link to="/services">View All Services</Link>
                             </Button>

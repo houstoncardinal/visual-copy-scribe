@@ -67,7 +67,7 @@ const CaseStudies = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             CASE STUDIES
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -78,10 +78,10 @@ const CaseStudies = () => {
       </section>
 
       {/* Success Metrics */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               PROVEN RESULTS
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ const CaseStudies = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
             {metrics.map((metric, index) => (
-              <Card key={index} className="text-center p-6 bg-gradient-card border-border/20">
+              <Card key={index} className="text-center p-6 bg-white border-2 border-accent rounded-xl shadow-lg">
                 <CardContent className="p-0">
                   <div className="text-3xl font-bold text-primary mb-2">{metric.number}</div>
                   <div className="text-sm text-muted-foreground">{metric.label}</div>
@@ -103,10 +103,10 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-gradient-card">
+      <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               SUCCESS STORIES
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -116,20 +116,20 @@ const CaseStudies = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="bg-background border-border/20 hover:shadow-[var(--shadow-card)] transition-all duration-300">
+              <Card key={index} className="bg-primary/80 border-2 border-accent rounded-xl shadow-lg text-white hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="p-3 bg-gradient-accent rounded-lg flex-shrink-0">
                       <Shield className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-foreground mb-1">{study.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-1">{study.title}</h3>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1 text-white/80">
                           <FileText className="w-4 h-4" />
                           {study.category}
                         </span>
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1 text-white/80">
                           <Calendar className="w-4 h-4" />
                           {study.duration}
                         </span>
@@ -139,20 +139,20 @@ const CaseStudies = () => {
 
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Challenge</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{study.challenge}</p>
+                      <h4 className="font-semibold text-white mb-2">Challenge</h4>
+                      <p className="text-sm text-white/90 leading-relaxed">{study.challenge}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Solution</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{study.solution}</p>
+                      <h4 className="font-semibold text-white mb-2">Solution</h4>
+                      <p className="text-sm text-white/90 leading-relaxed">{study.solution}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Result</h4>
+                      <h4 className="font-semibold text-white mb-2">Result</h4>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-muted-foreground leading-relaxed">{study.result}</p>
+                        <p className="text-sm text-white/90 leading-relaxed">{study.result}</p>
                       </div>
                     </div>
                   </div>
@@ -164,10 +164,10 @@ const CaseStudies = () => {
       </section>
 
       {/* Capabilities Showcase */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               OUR CAPABILITIES
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

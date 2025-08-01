@@ -3,7 +3,7 @@ import { Shield, Phone, Mail, Facebook, Twitter, Youtube, Instagram } from "luci
 
 const Footer = () => {
   return (
-    <footer className="bg-security-darker text-foreground">
+    <footer className="bg-black text-gray-200 border-t border-border/20 py-8">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -13,8 +13,8 @@ const Footer = () => {
                 <Shield className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">K&S Security</h3>
-                <p className="text-sm text-muted-foreground">Staffing & Consulting</p>
+                <h1 className="text-lg font-bold text-white">K&S SECURITY</h1>
+                <p className="text-xs text-gray-300">STAFFING & CONSULTING</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
