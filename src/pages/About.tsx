@@ -50,7 +50,7 @@ const About = () => {
     "Rigorous background checks and screening process",
     "Comprehensive training programs and certifications",
     "Multi-state operations and licensing",
-    "Armed security options",
+    "Comprehensive security options",
     "24/7/365 availability and response",
     "Customized security protocols for each client",
     "Government and commercial contract experience"
@@ -83,10 +83,10 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  K&S Staffing & Consulting delivers elite security solutions through a team of highly trained armed personnel. We proudly serve a wide range of clients—including commercial properties, private estates, and government contracts—with a steadfast commitment to safety, professionalism, and discretion.
+                  K&S Staffing & Consulting delivers elite security solutions through a team of highly trained security professionals. We proudly serve a wide range of clients—including commercial properties, private estates, and government contracts—with a steadfast commitment to safety, professionalism, and discretion.
                 </p>
                 <p>
-                  All of our security officers are fully licensed, insured, and rigorously trained to operate in both standard and high-risk environments. Whether providing visible deterrence or armed protection, our personnel are prepared to meet the unique demands of each assignment.
+                  All of our security officers are fully licensed, insured, and rigorously trained to operate in both standard and high-risk environments. Whether providing visible deterrence or protection, our personnel are prepared to meet the unique demands of each assignment.
                 </p>
                 <p>
                   At K&S S&C, we don't just offer protection—we provide peace of mind through excellence, 

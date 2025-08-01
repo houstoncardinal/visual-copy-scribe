@@ -19,7 +19,7 @@ const Coverage = () => {
       code: "TX",
       description: "Our primary state of operations with comprehensive licensing and extensive coverage across all major metropolitan areas.",
       cities: ["Dallas", "Houston", "Austin", "San Antonio", "Fort Worth"],
-      services: ["Armed Security", "Unarmed Security", "Executive Protection", "Event Security"]
+      services: ["Executive Protection", "Event Security", "General Security"]
     },
     {
       name: "NEW YORK",
