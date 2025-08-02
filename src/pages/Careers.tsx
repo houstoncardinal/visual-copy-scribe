@@ -71,6 +71,7 @@ const Careers = () => {
                 <form 
                   name="careers-form"
                   method="POST"
+                  action="/"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
