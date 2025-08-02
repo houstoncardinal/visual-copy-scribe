@@ -15,8 +15,6 @@ const ContactForm = () => {
     phone: "",
     email: "",
     service: "",
-    licenseNumber: "",
-    licenseType: "",
     companyName: "",
     additionalInfo: ""
   });
@@ -32,11 +30,7 @@ const ContactForm = () => {
     "Residential & Commercial"
   ];
 
-  const licenseTypes = [
-    "Armed"
-  ];
-
-  const progress = (step / 3) * 100;
+  const progress = (step / 2) * 100;
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -67,8 +61,6 @@ const ContactForm = () => {
       phone: "",
       email: "",
       service: "",
-      licenseNumber: "",
-      licenseType: "",
       companyName: "",
       additionalInfo: ""
     });
@@ -92,7 +84,7 @@ const ContactForm = () => {
       </div>
       <div className="text-center">
         <h3 className="text-2xl font-bold text-foreground mb-2">Get Started</h3>
-        <p className="text-muted-foreground">Step {step} of 3</p>
+        <p className="text-muted-foreground">Step {step} of 2</p>
         <Progress value={progress} className="mt-3" />
       </div>
 
@@ -176,78 +168,24 @@ const ContactForm = () => {
       {step === 2 && (
         <div className="space-y-4">
           <div>
-            <Label htmlFor="licenseNumber">License Number (State of Texas) *</Label>
-            <Input
-              id="licenseNumber"
-              name="licenseNumber"
-              value={formData.licenseNumber}
-              onChange={(e) => handleInputChange("licenseNumber", e.target.value)}
-              required
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="licenseType">License Type *</Label>
-            <Select value={formData.licenseType} onValueChange={(value) => handleInputChange("licenseType", value)}>
-              <SelectTrigger name="licenseType">
-                <SelectValue placeholder="Select license type" />
-              </SelectTrigger>
-              <SelectContent>
-                {licenseTypes.map((type) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div>
-            <Label htmlFor="additionalInfo">Tell us about your experience, certifications, or any additional information...</Label>
-            <Textarea
-              id="additionalInfo"
-              name="additionalInfo"
-              value={formData.additionalInfo}
-              onChange={(e) => handleInputChange("additionalInfo", e.target.value)}
-              rows={4}
-            />
-          </div>
-
-          <div className="flex gap-4">
-            <Button type="button" onClick={handlePrevious} variant="outline" className="flex-1">
-              Previous
-            </Button>
-            <Button 
-              type="button" 
-              onClick={handleNext} 
-              className="flex-1"
-              variant="security"
-              disabled={!formData.licenseNumber || !formData.licenseType}
-            >
-              Next
-            </Button>
-          </div>
-        </div>
-      )}
-
-      {step === 3 && (
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="companyName">Company Name</Label>
+            <Label htmlFor="companyName">Company Name (Optional)</Label>
             <Input
               id="companyName"
               name="companyName"
               value={formData.companyName}
               onChange={(e) => handleInputChange("companyName", e.target.value)}
+              placeholder="Enter your company name if applicable"
             />
           </div>
 
           <div>
-            <Label htmlFor="finalInfo">Additional Information (Optional)</Label>
+            <Label htmlFor="additionalInfo">Additional Information (Optional)</Label>
             <Textarea
-              id="finalInfo"
-              name="finalInfo"
-              placeholder="Tell us about your specific needs, timeline, or any other requirements..."
+              id="additionalInfo"
+              name="additionalInfo"
+              value={formData.additionalInfo}
+              onChange={(e) => handleInputChange("additionalInfo", e.target.value)}
+              placeholder="Tell us about your specific security needs, timeline, or any other requirements..."
               rows={4}
             />
           </div>
@@ -257,7 +195,7 @@ const ContactForm = () => {
               Previous
             </Button>
             <Button type="submit" className="flex-1" variant="security">
-              Submit Application
+              Submit Request
             </Button>
           </div>
         </div>
