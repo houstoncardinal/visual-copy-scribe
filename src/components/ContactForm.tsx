@@ -76,7 +76,19 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form 
+      onSubmit={handleSubmit} 
+      className="space-y-6"
+      name="contact-form"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      {/* Netlify form detection */}
+      <input type="hidden" name="form-name" value="contact-form" />
+      <div className="hidden">
+        <input name="bot-field" />
+      </div>
       <div className="text-center">
         <h3 className="text-2xl font-bold text-foreground mb-2">Get Started</h3>
         <p className="text-muted-foreground">Step {step} of 3</p>
@@ -90,6 +102,7 @@ const ContactForm = () => {
               <Label htmlFor="firstName">First Name *</Label>
               <Input
                 id="firstName"
+                name="firstName"
                 value={formData.firstName}
                 onChange={(e) => handleInputChange("firstName", e.target.value)}
                 required
@@ -99,6 +112,7 @@ const ContactForm = () => {
               <Label htmlFor="lastName">Last Name *</Label>
               <Input
                 id="lastName"
+                name="lastName"
                 value={formData.lastName}
                 onChange={(e) => handleInputChange("lastName", e.target.value)}
                 required
@@ -110,6 +124,7 @@ const ContactForm = () => {
             <Label htmlFor="phone">Phone Number *</Label>
             <Input
               id="phone"
+              name="phone"
               type="tel"
               value={formData.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -121,6 +136,7 @@ const ContactForm = () => {
             <Label htmlFor="email">Email Address *</Label>
             <Input
               id="email"
+              name="email"
               type="email"
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
@@ -131,7 +147,7 @@ const ContactForm = () => {
           <div>
             <Label htmlFor="service">What service are you interested in? *</Label>
             <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-              <SelectTrigger>
+              <SelectTrigger name="service">
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
@@ -162,6 +178,7 @@ const ContactForm = () => {
             <Label htmlFor="licenseNumber">License Number (State of Texas) *</Label>
             <Input
               id="licenseNumber"
+              name="licenseNumber"
               value={formData.licenseNumber}
               onChange={(e) => handleInputChange("licenseNumber", e.target.value)}
               required
@@ -171,7 +188,7 @@ const ContactForm = () => {
           <div>
             <Label htmlFor="licenseType">License Type *</Label>
             <Select value={formData.licenseType} onValueChange={(value) => handleInputChange("licenseType", value)}>
-              <SelectTrigger>
+              <SelectTrigger name="licenseType">
                 <SelectValue placeholder="Select license type" />
               </SelectTrigger>
               <SelectContent>
@@ -188,6 +205,7 @@ const ContactForm = () => {
             <Label htmlFor="additionalInfo">Tell us about your experience, certifications, or any additional information...</Label>
             <Textarea
               id="additionalInfo"
+              name="additionalInfo"
               value={formData.additionalInfo}
               onChange={(e) => handleInputChange("additionalInfo", e.target.value)}
               rows={4}
@@ -217,6 +235,7 @@ const ContactForm = () => {
             <Label htmlFor="companyName">Company Name</Label>
             <Input
               id="companyName"
+              name="companyName"
               value={formData.companyName}
               onChange={(e) => handleInputChange("companyName", e.target.value)}
             />
@@ -226,6 +245,7 @@ const ContactForm = () => {
             <Label htmlFor="finalInfo">Additional Information (Optional)</Label>
             <Textarea
               id="finalInfo"
+              name="finalInfo"
               placeholder="Tell us about your specific needs, timeline, or any other requirements..."
               rows={4}
             />

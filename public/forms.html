@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms</title>
+</head>
+<body>
+  <!-- Contact Form -->
+  <form name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact-form" />
+    <div class="hidden">
+      <input name="bot-field" />
+    </div>
+    
+    <input name="firstName" type="text" />
+    <input name="lastName" type="text" />
+    <input name="phone" type="tel" />
+    <input name="email" type="email" />
+    <select name="service"></select>
+    <input name="licenseNumber" type="text" />
+    <select name="licenseType"></select>
+    <textarea name="additionalInfo"></textarea>
+    <input name="companyName" type="text" />
+    <textarea name="finalInfo"></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Careers Form -->
+  <form name="careers-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="careers-form" />
+    <div class="hidden">
+      <input name="bot-field" />
+    </div>
+    
+    <input name="firstName" type="text" />
+    <input name="lastName" type="text" />
+    <input name="email" type="email" />
+    <input name="phone" type="tel" />
+    <input name="license" type="text" />
+    <select name="licenseLevel"></select>
+    <input name="location" type="text" />
+    <select name="experience"></select>
+    <textarea name="availability"></textarea>
+    <textarea name="additionalInfo"></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html> 

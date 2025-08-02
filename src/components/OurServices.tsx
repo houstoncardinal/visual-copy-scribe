@@ -71,19 +71,40 @@ const OurServices = () => {
           </p>
         </div>
 
-        {/* Services Bento Grid */}
-        <BentoGrid
-          items={services.map((service, i) => ({
-            title: service.title,
-            description: service.description,
-            icon: <service.icon className="w-7 h-7 text-primary" />,
-            cta: "Learn More",
-            colSpan:
-              i === 0 || i === 5 ? 2 : // First and sixth cards are double-width
-              1, // Rest single
-            hasPersistentHover: i === 0 || i === 5, // Highlight key cards
-          }))}
-        />
+        {/* Services Grid - 4x2 Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {services.map((service, i) => (
+            <div
+              key={i}
+              className="group relative p-6 rounded-xl overflow-hidden transition-all duration-300 border border-gray-100/80 bg-white hover:shadow-lg hover:-translate-y-1"
+            >
+              <div className="relative flex flex-col space-y-4 h-full">
+                <div className="flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-accent group-hover:scale-110 transition-all duration-300">
+                    <service.icon className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-center">
+                  <h3 className="font-bold text-lg text-gray-900 tracking-tight leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-snug">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="mt-auto pt-4">
+                  <div className="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity text-center">
+                    Learn More →
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute inset-0 -z-10 rounded-xl p-px bg-gradient-to-br from-transparent via-gray-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          ))}
+        </div>
 
         {/* Professional Notice - Magical CTA */}
         <div className="max-w-3xl mx-auto mt-16 mb-8">

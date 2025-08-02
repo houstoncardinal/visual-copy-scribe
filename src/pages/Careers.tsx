@@ -68,88 +68,103 @@ const Careers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="firstName">First Name *</Label>
-                    <Input id="firstName" placeholder="Enter first name" required />
+                <form 
+                  name="careers-form"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
+                  {/* Netlify form detection */}
+                  <input type="hidden" name="form-name" value="careers-form" />
+                  <div className="hidden">
+                    <input name="bot-field" />
                   </div>
-                  <div>
-                    <Label htmlFor="lastName">Last Name *</Label>
-                    <Input id="lastName" placeholder="Enter last name" required />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName">First Name *</Label>
+                      <Input id="firstName" name="firstName" placeholder="Enter first name" required />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName">Last Name *</Label>
+                      <Input id="lastName" name="lastName" placeholder="Enter last name" required />
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="Enter email address" required />
-                </div>
+                  <div>
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input id="email" name="email" type="email" placeholder="Enter email address" required />
+                  </div>
 
-                <div>
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input id="phone" type="tel" placeholder="Enter phone number" required />
-                </div>
+                  <div>
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="Enter phone number" required />
+                  </div>
 
-                <div>
-                  <Label htmlFor="license">Security License Number *</Label>
-                  <Input id="license" placeholder="Enter your security license number" required />
-                </div>
+                  <div>
+                    <Label htmlFor="license">Security License Number *</Label>
+                    <Input id="license" name="license" placeholder="Enter your security license number" required />
+                  </div>
 
-                <div>
-                  <Label htmlFor="licenseLevel">Security License Level *</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select your license level" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="level1">Level 1 - Basic Security</SelectItem>
-                      <SelectItem value="level2">Level 2 - Intermediate Security</SelectItem>
-                      <SelectItem value="level3">Level 3 - Advanced Security</SelectItem>
-                      <SelectItem value="level4">Level 4 - Supervisor</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div>
+                    <Label htmlFor="licenseLevel">Security License Level *</Label>
+                    <Select name="licenseLevel">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select your license level" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="level1">Level 1 - Basic Security</SelectItem>
+                        <SelectItem value="level2">Level 2 - Intermediate Security</SelectItem>
+                        <SelectItem value="level3">Level 3 - Advanced Security</SelectItem>
+                        <SelectItem value="level4">Level 4 - Supervisor</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div>
-                  <Label htmlFor="location">Preferred Work Location</Label>
-                  <Input id="location" placeholder="City, State" />
-                </div>
+                  <div>
+                    <Label htmlFor="location">Preferred Work Location</Label>
+                    <Input id="location" name="location" placeholder="City, State" />
+                  </div>
 
-                <div>
-                  <Label htmlFor="experience">Years of Security Experience</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select experience level" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="0-1">0-1 years</SelectItem>
-                      <SelectItem value="2-5">2-5 years</SelectItem>
-                      <SelectItem value="5-10">5-10 years</SelectItem>
-                      <SelectItem value="10+">10+ years</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div>
+                    <Label htmlFor="experience">Years of Security Experience</Label>
+                    <Select name="experience">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select experience level" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="0-1">0-1 years</SelectItem>
+                        <SelectItem value="2-5">2-5 years</SelectItem>
+                        <SelectItem value="5-10">5-10 years</SelectItem>
+                        <SelectItem value="10+">10+ years</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div>
-                  <Label htmlFor="availability">Availability</Label>
-                  <Textarea 
-                    id="availability" 
-                    placeholder="Please describe your availability (days, shifts, etc.)"
-                    rows={3}
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="availability">Availability</Label>
+                    <Textarea 
+                      id="availability" 
+                      name="availability"
+                      placeholder="Please describe your availability (days, shifts, etc.)"
+                      rows={3}
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="additionalInfo">Additional Information</Label>
-                  <Textarea 
-                    id="additionalInfo" 
-                    placeholder="Tell us about yourself, special skills, or certifications"
-                    rows={4}
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="additionalInfo">Additional Information</Label>
+                    <Textarea 
+                      id="additionalInfo" 
+                      name="additionalInfo"
+                      placeholder="Tell us about yourself, special skills, or certifications"
+                      rows={4}
+                    />
+                  </div>
 
-                <Button variant="security" size="lg" className="w-full">
-                  Submit Application
-                </Button>
+                  <Button type="submit" variant="security" size="lg" className="w-full">
+                    Submit Application
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 

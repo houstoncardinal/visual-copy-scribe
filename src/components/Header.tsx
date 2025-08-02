@@ -136,10 +136,13 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Contact Us Button */}
-            <div className="hidden lg:block">
-              <Button variant="security" asChild>
-                <Link to="/contact">CONTACT US</Link>
+            {/* Action Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
+              <Button variant="security" size="sm" asChild>
+                <Link to="/careers">Apply Now</Link>
+              </Button>
+              <Button variant="securityOutline" size="sm" asChild>
+                <a href="tel:214-998-3597">Call 214-998-3597</a>
               </Button>
             </div>
 
@@ -183,9 +186,14 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <Button variant="security" className="mt-4" asChild>
-                  <Link to="/contact">CONTACT US</Link>
-                </Button>
+                <div className="mt-4 space-y-2">
+                  <Button variant="security" className="w-full" asChild>
+                    <Link to="/careers">Apply Now</Link>
+                  </Button>
+                  <Button variant="securityOutline" className="w-full" asChild>
+                    <a href="tel:214-998-3597">Call 214-998-3597</a>
+                  </Button>
+                </div>
               </nav>
             </div>
           )}

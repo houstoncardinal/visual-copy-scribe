@@ -15,15 +15,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-neutral-900/98"></div>
       </div>
 
-      {/* Career Buttons */}
-      <div className="absolute top-4 right-4 z-20 flex gap-3">
-        <Button variant="security" size="sm" asChild>
-          <Link to="/careers">Apply Now - Careers</Link>
-        </Button>
-        <Button variant="securityOutline" size="sm" asChild>
-          <a href="tel:214-998-3597">Call 214-998-3597</a>
-        </Button>
-      </div>
+
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
