@@ -1,3 +1,5 @@
+import SEO from "@/components/SEO";
+import { pageSEO } from "@/utils/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -60,6 +62,7 @@ const Coverage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO data={pageSEO.coverage} />
       <Header />
       
       {/* Hero Section */}

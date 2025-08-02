@@ -1,3 +1,5 @@
+import SEO from "@/components/SEO";
+import { pageSEO } from "@/utils/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";

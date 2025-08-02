@@ -1,3 +1,5 @@
+import SEO from "@/components/SEO";
+import { pageSEO } from "@/utils/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -74,6 +76,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO data={pageSEO.services} />
       <Header />
       
       {/* Hero Section */}
