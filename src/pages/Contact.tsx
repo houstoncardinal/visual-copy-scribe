@@ -154,7 +154,7 @@ const Contact = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-card">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-12">
             Why Choose K&S Security?
           </h2>
           
@@ -163,24 +163,24 @@ const Contact = () => {
               <div className="p-4 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">Immediate Response</h3>
-              <p className="text-sm text-muted-foreground">24/7 availability with rapid response times</p>
+              <h3 className="font-bold text-black mb-2">Immediate Response</h3>
+              <p className="text-sm text-gray-600">24/7 availability with rapid response times</p>
             </div>
 
             <div>
               <div className="p-4 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">Licensed & Insured</h3>
-              <p className="text-sm text-muted-foreground">Fully compliant with all state regulations</p>
+              <h3 className="font-bold text-black mb-2">Licensed & Insured</h3>
+              <p className="text-sm text-gray-600">Fully compliant with all state regulations</p>
             </div>
 
             <div>
               <div className="p-4 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <MessageCircle className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">Personal Service</h3>
-              <p className="text-sm text-muted-foreground">Dedicated account management and support</p>
+              <h3 className="font-bold text-black mb-2">Personal Service</h3>
+              <p className="text-sm text-gray-600">Dedicated account management and support</p>
             </div>
           </div>
         </div>

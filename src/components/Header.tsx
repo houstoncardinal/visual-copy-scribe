@@ -97,27 +97,21 @@ const Header = () => {
                           <h3 className="text-lg font-semibold text-white mb-2 tracking-wide">Our Services</h3>
                           <div className="grid grid-cols-2 gap-3">
                             {services.map((service) => (
-                              <Link
+                              <div
                                 key={service.name}
-                                to={service.href}
-                                className="flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all group border border-white/10 hover:border-white/30 shadow-sm hover:shadow-lg backdrop-blur-md"
+                                className="flex items-start gap-3 p-3 rounded-xl bg-white/5 transition-all group border border-white/10 backdrop-blur-md"
                               >
-                                <service.icon className="w-7 h-7 text-white group-hover:text-primary flex-shrink-0 drop-shadow" />
+                                <service.icon className="w-7 h-7 text-white flex-shrink-0 drop-shadow" />
                                 <div className="flex-1">
-                                  <div className="text-base font-bold text-white group-hover:text-primary mb-1 tracking-wide">
+                                  <div className="text-base font-bold text-white mb-1 tracking-wide">
                                     {service.name}
                                   </div>
-                                  <div className="text-xs text-white/80 group-hover:text-primary/80 leading-tight">
+                                  <div className="text-xs text-white/80 leading-tight">
                                     {service.description}
                                   </div>
                                 </div>
-                              </Link>
+                              </div>
                             ))}
-                          </div>
-                          <div className="mt-4 pt-3 border-t border-white/10">
-                            <Button variant="security" size="sm" asChild className="w-full">
-                              <Link to="/services">View All Services</Link>
-                            </Button>
                           </div>
                         </div>
                       )}

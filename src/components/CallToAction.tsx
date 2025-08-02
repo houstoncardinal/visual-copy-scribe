@@ -29,7 +29,7 @@ const CallToAction = () => {
           </div>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We are a global security company that provides coverage all over the CONUS and internationally. 
+            We provide professional security services across Texas, New York, Florida, New Jersey, Tennessee, and California. 
             Reach out to us today to get started!
           </p>
           
