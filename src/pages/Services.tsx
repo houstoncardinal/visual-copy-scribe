@@ -63,13 +63,11 @@ const Services = () => {
 
   const additionalServices = [
     "Apartment Complexes - 24/7 residential security monitoring",
-    "Banks - Financial institution protection services", 
     "Hotels - Hospitality security and guest protection",
     "Bars & Entertainment - Crowd control and venue security",
     "Asset Protection - High-value asset and property security",
     "Workplace Violence Prevention - Threat assessment and mitigation",
-    "VIP Escort / Concierge - Executive protection services",
-    "Private School Escorts - Safe transport for students",
+    "VIP Concierge - Professional concierge services",
     "Weddings - Special event security coordination",
     "Private Parties - Event security and access control"
   ];

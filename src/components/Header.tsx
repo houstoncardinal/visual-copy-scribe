@@ -17,14 +17,12 @@ const Header = () => {
   ];
 
   const services = [
-    { name: "APARTMENT COMPLEXES", href: "/services/vip-protection", icon: Building, description: "24/7 residential security monitoring" },
-    { name: "BANKS", href: "/services/executive-protection", icon: Landmark, description: "Financial institution protection services" },
-    { name: "HOTELS", href: "/services/international-operations", icon: Hotel, description: "Hospitality security and guest protection" },
-    { name: "BARS & ENTERTAINMENT", href: "/services/events-tours", icon: Music, description: "Crowd control and venue security" },
-    { name: "ASSET PROTECTION", href: "/services/domestic-security", icon: ShieldIcon, description: "High-value asset and property security" },
-    { name: "WORKPLACE VIOLENCE PREVENTION", href: "/services/residential-commercial", icon: AlertTriangle, description: "Threat assessment and mitigation" },
-    { name: "VIP ESCORT / CONCIERGE", href: "/services/vip-escort", icon: User, description: "Executive protection services" },
-    { name: "PRIVATE SCHOOL ESCORTS", href: "/services/private-school-escorts", icon: GraduationCap, description: "Safe transport for students" },
+    { name: "APARTMENT COMPLEXES", href: "/services/apartment-complexes", icon: Building, description: "24/7 residential security monitoring" },
+    { name: "HOTELS", href: "/services/hotels", icon: Hotel, description: "Hospitality security and guest protection" },
+    { name: "BARS & ENTERTAINMENT", href: "/services/bars-entertainment", icon: Music, description: "Crowd control and venue security" },
+    { name: "ASSET PROTECTION", href: "/services/asset-protection", icon: ShieldIcon, description: "High-value asset and property security" },
+    { name: "WORKPLACE VIOLENCE PREVENTION", href: "/services/workplace-violence-prevention", icon: AlertTriangle, description: "Threat assessment and mitigation" },
+    { name: "VIP CONCIERGE", href: "/services/vip-concierge", icon: User, description: "Professional concierge services" },
     { name: "WEDDINGS", href: "/services/weddings", icon: Heart, description: "Special event security coordination" },
     { name: "PRIVATE PARTIES", href: "/services/private-parties", icon: Users, description: "Event security and access control" },
   ];

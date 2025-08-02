@@ -22,11 +22,6 @@ const OurServices = () => {
       description: "24/7 residential security monitoring"
     },
     {
-      icon: Landmark,
-      title: "BANKS",
-      description: "Financial institution protection services"
-    },
-    {
       icon: Hotel,
       title: "HOTELS",
       description: "Hospitality security and guest protection"
@@ -48,13 +43,8 @@ const OurServices = () => {
     },
     {
       icon: User,
-      title: "VIP ESCORT / CONCIERGE",
-      description: "Executive protection services"
-    },
-    {
-      icon: GraduationCap,
-      title: "PRIVATE SCHOOL ESCORTS",
-      description: "Safe transport for students"
+      title: "VIP CONCIERGE",
+      description: "Professional concierge services"
     },
     {
       icon: Heart,

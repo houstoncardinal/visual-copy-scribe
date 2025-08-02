@@ -15,6 +15,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-neutral-900/98"></div>
       </div>
 
+      {/* Career Buttons */}
+      <div className="absolute top-4 right-4 z-20 flex gap-3">
+        <Button variant="security" size="sm" asChild>
+          <Link to="/careers">Apply Now - Careers</Link>
+        </Button>
+        <Button variant="securityOutline" size="sm" asChild>
+          <a href="tel:214-998-3597">Call 214-998-3597</a>
+        </Button>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -29,15 +39,15 @@ const Hero = () => {
                 <span className="text-primary">CONSULTING</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Licensed & Insured Security Professionals Nationwide
+                Licensed & Insured Unarmed Security Professionals Nationwide
               </h2>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              K&S S&C delivers elite security solutions through a team of highly trained 
-              armed and unarmed personnel. We proudly serve a wide range of clients—including 
-              commercial properties, private estates, and government contracts—with a steadfast 
-              commitment to safety, professionalism, and discretion.
+              K&S Staffing & Consulting delivers elite unarmed security solutions including 
+              apartment complexes, hotels, bars & entertainment venues, asset protection, 
+              workplace violence prevention, VIP concierge services, weddings, and private parties. 
+              We maintain the highest standards of professionalism and discretion.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
